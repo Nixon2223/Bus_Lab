@@ -29,15 +29,15 @@ class Bus:
         person.reduce_cash(self.price)
     
     def pick_up_from_stop(self, bus_stop):
-        
-        # if self.remaining_capacity() >= bus_stop.queue_length():
+        got_on = []
         for person in bus_stop.queue:
             if person.destination == self.destination and person.cash >= self.price and self.remaining_capacity() >= bus_stop.queue_length():
-                self.passengers.append(person)
                 self.pay(person)
+                got_on.append(person)
+        for person in got_on:
+            if person in bus_stop.queue:
                 bus_stop.queue.remove(person)
-        # self.passengers += bus_stop.queue
-        # bus_stop.clear()
+
 
 
         

@@ -55,7 +55,7 @@ class TestBus(unittest.TestCase):
     # @unittest.skip("Delete this line to run the test")
     def test_can_pick_up_passenger_from_bus_stop(self):
         # self.bus.destination = "x" 
-        person_1 = Person("Guido van Rossum", 64, 20, "x")
+        person_1 = Person("Guido van Rossum", 64, 10, "Ocean Terminal")
         person_2 = Person("Carol Willing", 50, 10, "Ocean Terminal")
         bus_stop = BusStop("Waverly Station")
         bus_stop.add_to_queue(person_1)
