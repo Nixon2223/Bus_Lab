@@ -7,3 +7,5 @@ class Person:
     
     def reduce_cash(self, amount):
         self.cash -= amount
+    
+    
